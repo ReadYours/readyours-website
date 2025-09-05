@@ -1,86 +1,125 @@
-/* General Body Styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0;
-  background-color: #f4f7f9;
-  color: #333;
+/* --- General & Dark Theme Setup --- */
+:root {
+  --background-dark: #121212;
+  --text-primary: #F7FAFC;
+  --text-secondary: #A0AEC0;
+  --accent-yellow: #fee161;
+  --card-background: #1A202C;
 }
 
-/* Container for text-heavy pages like privacy and terms */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  margin-top: 2rem;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
   line-height: 1.6;
 }
 
-h1, h2 {
-  color: #1a202c;
+/* --- Reusable Container for Privacy & Terms --- */
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+}
+
+.container h1, .container h2 {
+  color: var(--text-primary);
+  border-bottom: 1px solid #2D3748;
+  padding-bottom: 0.5rem;
+}
+
+.container a {
+  color: var(--accent-yellow);
 }
 
 hr {
-  margin: 2rem 0;
-  border: 0;
-  border-top: 1px solid #e2e8f0;
+  border-color: #2D3748;
 }
 
-a {
-    color: #007aff;
-    text-decoration: none;
-}
 
-a:hover {
-    text-decoration: underline;
-}
+/* --- Homepage Specific Styles --- */
 
-/* Homepage Specific Styles */
-.header {
-  background: linear-gradient(90deg, #4F46E5, #3B82F6);
-  color: white;
-  padding: 4rem 2rem;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 5rem 2rem;
+  min-height: 80vh;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: white;
+.hero .logo {
+  max-height: 120px;
+  margin-bottom: 2rem;
 }
 
-.header p {
+.hero h1 {
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+  font-weight: 800;
+  max-width: 800px;
+}
+
+.hero p {
   font-size: 1.25rem;
-  opacity: 0.9;
-}
-
-.main-content {
-  padding: 2rem;
-  text-align: center;
-}
-
-.main-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.main-content p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 0 2rem 0;
 }
 
 .download-badges {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .download-badges a img {
-  height: 60px;
+  height: 58px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.download-badges a:hover img {
+    transform: scale(1.05);
+}
+
+.page-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: left;
+}
+
+.feature-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: var(--accent-yellow);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
 }
 
 .footer {
@@ -88,9 +127,41 @@ a:hover {
   padding: 2rem;
   margin-top: 2rem;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-secondary);
+  border-top: 1px solid #2D3748;
 }
 
 .footer a {
+  color: var(--accent-yellow);
+  text-decoration: none;
   margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero .logo {
+    max-height: 100px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-section h2 {
+    font-size: 2rem;
+  }
 }
