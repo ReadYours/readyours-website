@@ -1,0 +1,96 @@
+/* General Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  background-color: #f4f7f9;
+  color: #333;
+}
+
+/* Container for text-heavy pages like privacy and terms */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #1a202c;
+}
+
+hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Homepage Specific Styles */
+.header {
+  background: linear-gradient(90deg, #4F46E5, #3B82F6);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+.header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.download-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.download-badges a img {
+  height: 60px;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer a {
+  margin: 0 10px;
+}
