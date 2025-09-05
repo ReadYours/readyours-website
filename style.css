@@ -52,7 +52,7 @@ hr {
 }
 
 .hero .logo {
-  max-height: 120px;
+  max-height: 150px;
   margin-bottom: 2rem;
 }
 
@@ -154,7 +154,12 @@ hr {
   }
 
   .hero .logo {
-    max-height: 100px;
+    max-height: 120px;
+  }
+
+  .download-badges {
+    flex-direction: column;
+    align-items: center;
   }
 
   .features-grid {
