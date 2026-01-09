@@ -300,11 +300,7 @@ hr {
   }
 
   .hero-screenshots {
-    justify-content: center;
-  }
-
-  .hero-ss {
-    width: 120px;
+    display: none;
   }
 
   .screenshot-card {
