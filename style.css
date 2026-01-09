@@ -86,6 +86,69 @@ hr {
     transform: scale(1.05);
 }
 
+/* --- Screenshot Gallery Section --- */
+.screenshots-section {
+  padding: 3rem 0 4rem 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--background-dark), var(--card-background));
+}
+
+.screenshots-container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 2rem 2rem 2rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-yellow) var(--card-background);
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+.screenshots-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.screenshots-container::-webkit-scrollbar-track {
+  background: var(--card-background);
+  border-radius: 5px;
+  margin: 0 2rem;
+}
+
+.screenshots-container::-webkit-scrollbar-thumb {
+  background: var(--accent-yellow);
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.screenshots-container::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
+
+.screenshot-card {
+  flex: 0 0 auto;
+  width: 320px;
+  transition: transform 0.3s ease;
+  transform: translateZ(0);
+}
+
+.screenshot-card:hover {
+  transform: scale(1.05) translateZ(0);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.screenshot-card:hover img {
+  box-shadow: 0 25px 80px rgba(254, 225, 97, 0.3);
+}
+
 .page-section {
     padding: 4rem 2rem;
     max-width: 1000px;
@@ -168,5 +231,17 @@ hr {
 
   .page-section h2 {
     font-size: 2rem;
+  }
+
+  .screenshot-card {
+    width: 240px;
+  }
+
+  .screenshots-container {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .screenshots-container::-webkit-scrollbar-track {
+    margin: 0 1rem;
   }
 }
